@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="426.0" prefWidth="725.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <ImageView fitHeight="318.0" fitWidth="725.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn_cryption.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="start" blendMode="OVERLAY" fill="#f00d0d" layoutX="364.0" layoutY="194.0" onMouseClicked="#onStartClicked" onMousePressed="#onStartPressed" opacity="0.0" radius="78.0" stroke="BLACK" strokeType="INSIDE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+   </children>
+</AnchorPane>

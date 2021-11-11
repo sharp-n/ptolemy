@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="426.0" prefWidth="725.0" style="-fx-background-color: #FAFAD2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextArea fx:id="textArea" layoutX="22.0" layoutY="44.0" prefHeight="160.0" prefWidth="326.0" style="-fx-background-color: #DEB887; -fx-wrap-text: true;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea id="codedTextArea" fx:id="codedTextArea" layoutX="376.0" layoutY="44.0" prefHeight="160.0" prefWidth="326.0" style="-fx-background-color: #DEB887; -fx-wrap-text: true;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="openFileDecodedTextBtn" layoutX="22.0" layoutY="215.0" mnemonicParsing="false" onAction="#openDecodedText" prefHeight="32.0" prefWidth="126.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Відкрити файл" />
+      <Button fx:id="clearDecodedTextBtn" layoutX="158.0" layoutY="215.0" mnemonicParsing="false" onAction="#clearDecodedText" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Очистити" />
+      <Button fx:id="saveDecodedTextBtn" layoutX="257.0" layoutY="215.0" mnemonicParsing="false" onAction="#saveDecodedText" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Зберегти" />
+      <Button fx:id="openFileCodedTextBtn" layoutX="375.0" layoutY="215.0" mnemonicParsing="false" onAction="#openCodedText" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #F5DEB3#F5DEB3; -fx-border-color: #DEB887;" text="Відкрити файл" />
+      <Button fx:id="clearCodedTextBtn" layoutX="512.0" layoutY="215.0" mnemonicParsing="false" onAction="#clearCodedText" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Очистити" />
+      <Button fx:id="saveCodedTextBtn" layoutX="612.0" layoutY="215.0" mnemonicParsing="false" onAction="#saveCodedText" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Зберегти" />
+      <Button fx:id="codeBtn" layoutX="376.0" layoutY="256.0" mnemonicParsing="false" onAction="#codeThisText" prefHeight="31.0" prefWidth="326.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Зашифрувати" />
+      <Button fx:id="decodeBtn" layoutX="376.0" layoutY="296.0" mnemonicParsing="false" onAction="#decodeThisText" prefHeight="32.0" prefWidth="326.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Розшифрувати" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f00" height="107.0" layoutX="282.0" layoutY="256.0" stroke="WHEAT" strokeType="INSIDE" strokeWidth="0.7" width="88.0" />
+      <RadioButton layoutX="285.0" layoutY="341.0" mnemonicParsing="false" text="Русский">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="285.0" layoutY="312.0" mnemonicParsing="false" text="Українська" toggleGroup="$toggle" />
+      <RadioButton layoutX="285.0" layoutY="283.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="82.0" selected="true" text="English" toggleGroup="$toggle" />
+      <Label layoutX="287.0" layoutY="263.0" prefHeight="18.0" prefWidth="106.0" text="Оберіть мову" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f00" height="45.0" layoutX="21.0" layoutY="256.0" stroke="WHEAT" strokeType="INSIDE" strokeWidth="0.7" width="257.0" />
+      <Label layoutX="28.0" layoutY="271.0" prefHeight="18.0" prefWidth="150.0" text="Довжина блоку:" />
+      <TextField fx:id="forElemNum" layoutX="122.0" layoutY="264.0" prefHeight="18.0" prefWidth="66.0" style="-fx-border-color: #DEB887;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f00" height="45.0" layoutX="21.0" layoutY="369.0" stroke="WHEAT" strokeType="INSIDE" strokeWidth="0.7" width="257.0" />
+      <Label layoutX="26.0" layoutY="382.0" prefHeight="18.0" prefWidth="34.0" text="Ключ:" />
+      <TextField fx:id="forKey" layoutX="63.0" layoutY="376.0" prefHeight="32.0" prefWidth="126.0" style="-fx-border-color: #DEB887;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addKey" layoutX="376.0" layoutY="336.0" mnemonicParsing="false" onAction="#addKeyToText" prefHeight="32.0" prefWidth="326.0" style="-fx-background-color: #F5DEB3#F5DEB3; -fx-border-color: #DEB887;" text=" Додати ключ та довжину повідомлення" />
+      <Label alignment="CENTER" layoutX="22.0" layoutY="15.0" prefHeight="19.0" prefWidth="326.0" style="-fx-border-color: #DEB887;" text="Відкрите повідомлення" />
+      <Label alignment="CENTER" layoutX="376.0" layoutY="15.0" prefHeight="19.0" prefWidth="326.0" style="-fx-border-color: #DEB887;" text="Вихідне повідомлення" />
+      <Button fx:id="instructionBtn" layoutX="376.0" layoutY="376.0" mnemonicParsing="false" onAction="#openInstruction" prefHeight="32.0" prefWidth="326.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Інструкція" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f00" height="45.0" layoutX="21.0" layoutY="313.0" stroke="WHEAT" strokeType="INSIDE" strokeWidth="0.7" width="257.0" />
+      <TextField fx:id="lengthOfText" layoutX="143.0" layoutY="320.0" prefHeight="32.0" prefWidth="45.0" style="-fx-border-color: #DEB887;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="textLengthBtn" layoutX="27.0" layoutY="319.0" mnemonicParsing="false" onAction="#setLengthOfText" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Довжина тексту" />
+      <Button fx:id="clearBlockLengthBtn" layoutX="198.0" layoutY="263.0" mnemonicParsing="false" onAction="#clearBlockLength" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Очистити" />
+      <Button fx:id="clearTextLengthBtn" layoutX="198.0" layoutY="319.0" mnemonicParsing="false" onAction="#clearTextLength" prefHeight="32.0" prefWidth="74.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Очистити" />
+      <Button fx:id="clearKeyBtn" layoutX="198.0" layoutY="376.0" mnemonicParsing="false" onAction="#clearKey" prefHeight="32.0" prefWidth="74.0" style="-fx-background-color: #F5DEB3; -fx-border-color: #DEB887;" text="Очистити" />
+      <Button fx:id="hyperlinkBtn" layoutX="281.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#hyperlinkClicked" prefHeight="32.0" prefWidth="90.0" style="-fx-border-color: #DEB887; -fx-background-color: #F5DEB3;" text="Сайт" />
+   </children>
+</AnchorPane>
